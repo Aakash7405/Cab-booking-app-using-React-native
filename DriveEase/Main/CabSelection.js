@@ -16,8 +16,7 @@ import MapView, {Marker} from 'react-native-maps';
 import FontAwesome from 'react-native-vector-icons/Ionicons';
 import MapViewDirections from 'react-native-maps-directions';
 import {io} from 'socket.io-client';
-// import {opacity} from 'react-native-reanimated/lib/typescript/reanimated2/Colors';
-// import Icon from 'react-native-vector-icons/Ionicons';
+
 const {width, height} = Dimensions.get('window');
 
 const ridedata = [
