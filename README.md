@@ -22,30 +22,34 @@ Welcome to the Cab Booking Application! This project is developed using React Na
 * **Socket.io**: For enabling real-time communication between drivers and riders.
   
 # Installation
-**1. Clone the repository:**
+**1. Clone the repository**
 
 git clone https://github.com/yourusername/cab-booking-app.git
 cd cab-booking-app
 
-## Install dependencies:
+## Install dependencies
 
 npm install
 
-## Set up environment variables:
+## Set up environment variables
 **1.Create a .env file in the root directory and add the following variables:**
 
-MONGODB_URI=your_mongodb_uri
-TWILIO_ACCOUNT_SID=your_twilio_account_sid
-TWILIO_AUTH_TOKEN=your_twilio_auth_token
-GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+MONGODB_URI=your_mongodb_uri  
+TWILIO_ACCOUNT_SID=your_twilio_account_sid  
+TWILIO_AUTH_TOKEN=your_twilio_auth_token  
+GOOGLE_MAPS_API_KEY=your_google_maps_api_key  
 
-## Run the application:
+## Run the application
 
 npm start
-Usage
-Sign Up / Log In: Users sign up or log in using their phone numbers. A verification code is sent via SMS using Twilio API.
-Book a Ride: After logging in, users can enter their pickup and drop locations. The app uses Google Maps to find these locations and calculate the route.
-Real-Time Tracking: Once a ride is booked, users can track the driver's location in real-time.
-Driver Interaction: Drivers can accept rides, receive route information, and navigate to the rider's location.
-Contributing
+
+# Usage
+1. **Sign Up / Log In:** Users sign up or log in using their phone numbers. A verification code is sent via SMS using Twilio API.  
+2. **Book a Ride:** After logging in, users can enter their pickup and drop locations. The app uses Google Maps to find these locations and calculate the route.  
+3. **Real-Time Tracking:** Once a ride is booked, users can track the driver's location in real-time.  
+4. **Driver Interaction:** Drivers can accept rides, receive route information, and navigate to the rider's location.  
+# Contributing
 We welcome contributions! Please fork the repository and submit pull requests.
+
+
+
