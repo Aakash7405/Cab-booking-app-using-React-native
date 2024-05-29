@@ -36,13 +36,6 @@ const connectdb = async () => {
 };
 
 //socket connection
-const car={
-  Standard:'Wagonr',
-  Deluxe:'Swift Dzire',
-  Premium:'Innova',
-  Motor:"super Splendor",
-  Auto:'Auto',
-}
 function generateOTP()
 {
   const number='0123456789';
@@ -62,16 +55,9 @@ io.on('connection',(socket)=>{
     console.log(riderDetails);
     const type=riderDetails.carType;
     const OTP=generateOTP();
-    // setTimeout(()=>{
-      // socket.emit('connectRider',{name:'Satyendra goyal',ratings:4.7,car:car[type],carNo:'UP14 EC 9715',OTP:OTP,description:'Sector 62, Noida, Uttar Pradesh,India',driverLocation:{latitude:28.627981,longitude:77.3648567}});
-    // },5000)
-    
     socket.broadcast.emit('connectDriver',{riderDetails})
   })
-
-  // socket.emit('connectDriver',{price:214,origin:'ABES ENGINEERING COLLEGE, NH 24, Chipiyana Buzurg, Ghaziabad, Uttar Pradesh,India',destination:'sector 52, Noida, Uttar Pradesh, India',time:'27 min'});
   
-
   socket.on('rideAccepted',(driverDetails)=>{
     socket.broadcast.emit('connectRider',{...driverDetails,OTP:OTP})
     console.log(driverDetails);
